@@ -3,6 +3,7 @@ package com.jpmc.theater;
 import java.time.Duration;
 import java.util.Objects;
 
+
 public class Movie {
 
     private String title;
@@ -11,7 +12,13 @@ public class Movie {
     private double ticketPrice;
     private int specialCode;
 
-    // Movie only used to keep track of movie stats, all discount math in showing
+    /**
+     * @param title title of the movie
+     * @param runningTime how long the movie is
+     * @param ticketPrice what the base price for the movie
+     * @param specialCode if the movie has a special code for discount
+     * Movie is just a getter and setter class to add movies to the showings later on
+     */
     public Movie(String title, Duration runningTime, double ticketPrice, int specialCode) {
         this.title = title;
         this.runningTime = runningTime;

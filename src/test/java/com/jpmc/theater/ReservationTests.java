@@ -30,6 +30,6 @@ public class ReservationTests {
                 5,
                 LocalDateTime.of(LocalDate.of(2023,6,6), LocalTime.of(2,30))
         );
-        assertTrue(new Reservation(customer, showing, 1).totalFee() == 12.5);
+        assertTrue(new Reservation(customer, showing, 2).totalFee() == 25);
     }
 }

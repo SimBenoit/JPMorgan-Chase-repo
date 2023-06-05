@@ -59,6 +59,7 @@ public class Theater {
         return String.format("(%s hour%s %s minute%s)", hour, handlePlural(hour), remainingMin, handlePlural(remainingMin));
     }
 
+    //creates a new JSON object of the entire schedule and prints it out
     public void printJSONSchedule(){
         JSONArray ja = new JSONArray(schedule);
         System.out.println(ja);

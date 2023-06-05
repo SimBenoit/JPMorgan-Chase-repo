@@ -12,10 +12,15 @@ public class Showing {
     private LocalDateTime showStartTime;
     private double showingFee;
 
+
     /**
+     * @param movie which movie it is
+     * @param sequenceOfTheDay what is the place of the movie in the daily list of movies
+     * @param showStartTime what time the showing starts
+     * @param showingFee calculated price of a ticket after taking into account discounts
      * Showing is the big class, where we keep track of a TicketPrice according to the time
      * people reserve specific showings
-    **/
+     */
     public Showing(Movie movie, int sequenceOfTheDay, LocalDateTime showStartTime) {
         this.movie = movie;
         this.sequenceOfTheDay = sequenceOfTheDay;

@@ -9,6 +9,8 @@ import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
+//Test class for all the different discounts
 public class DiscountTests {
     Movie spiderMan = new Movie("Spider-Man: No Way Home", Duration.ofMinutes(90),12.5, 0);
     @Test
