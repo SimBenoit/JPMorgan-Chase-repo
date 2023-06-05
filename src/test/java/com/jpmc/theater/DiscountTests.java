@@ -45,6 +45,24 @@ public class DiscountTests {
     }
 
     @Test
+    void movie25PercentDiscountTimeOfDayUpperLimit() {
+        Movie spiderMan = new Movie("Spider-Man: No Way Home", Duration.ofMinutes(90),10, 0);
+        Showing showing = new Showing(spiderMan, 5, LocalDateTime.of(LocalDate.of(2023,6,6), LocalTime.of(16, 0)));
+        assertEquals(7.5, showing.getMovieFee());
+        
+        System.out.println(Duration.ofMinutes(90));
+    }
+
+    @Test
+    void movie25PercentDiscountTimeOfDayLowerLimit() {
+        Movie spiderMan = new Movie("Spider-Man: No Way Home", Duration.ofMinutes(90),10, 0);
+        Showing showing = new Showing(spiderMan, 5, LocalDateTime.of(LocalDate.of(2023,6,6), LocalTime.of(11,0)));
+        assertEquals(7.5, showing.getMovieFee());
+        
+        System.out.println(Duration.ofMinutes(90));
+    }
+
+    @Test
     void movieDiscount7OfMonth() {
         Showing showing = new Showing(spiderMan, 5, LocalDateTime.of(LocalDate.of(2023,7,7), LocalTime.of(2,30)));
         assertEquals(11.5, showing.getMovieFee());

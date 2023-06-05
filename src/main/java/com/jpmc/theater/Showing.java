@@ -80,7 +80,7 @@ public class Showing {
         if (showStartTime.getDayOfMonth() == 7){
             Discounts.add(1.0);
         }
-        if (showStartTime.getHour()>= 11 && showStartTime.getHour()<= 15){
+        if (showStartTime.getHour()>= 11 && showStartTime.getHour()<= 16){
             Discounts.add(movie.getTicketPrice()*0.25);
         }
 
